@@ -16,12 +16,12 @@ steps:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
 - task: Npm@1
-  displayName: 'Installing Modules in /client'
+  displayName: 'Installing Modules in /client-main'
   inputs:
     command: 'install'
     workingDir: 'client-main'
 - task: Npm@1
-  displayName: 'Installing Modules in /server'
+  displayName: 'Installing Modules in /server-main'
   inputs:
     command: 'install'
     workingDir: 'server-main'
@@ -37,7 +37,7 @@ steps:
     ArtifactName: 'release'
     publishLocation: 'Container'
 - task: Npm@1
-  displayName: 'Building  Modules in /client'
+  displayName: 'Building  Modules in /client-main'
   inputs:
     command: 'custom'
     workingDir: 'client-main'
